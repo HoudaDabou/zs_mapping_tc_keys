@@ -8,7 +8,7 @@ const authToken = Buffer.from(auth).toString('base64');
 // GET all test cases from a given Zephyr Scale project in Jira source
 const source_baseUrl = process.env.SOURCE_BASE_URL;
 const searchSourceProject = `projectKey = "${process.env.SOURCE_PROJECT_KEY}"`;
-const querySource = `query=${encodeURIComponent(searchSourceProject)}&fields=name,key&maxResults=5000`;
+const querySource = `query=${encodeURIComponent(searchSourceProject)}&fields=name,key,testScript&maxResults=5000`;
 
 const optionsSource = {
   hostname: `${source_baseUrl}`,
